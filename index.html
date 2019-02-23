@@ -18,16 +18,17 @@
     <h1>JavaScript for Student Estimators!</h1>
     <h3>Right-click / Inspect, then select console</h3>
 
-    <p>Enter your name:
-      <input id="guest" type="name" >
-    </p>
 
-    <p>Enter studentsPerCourse:
+    <p>Enter firstNumber:
       <input id="firstNumber" type="number" >
     </p>
 
-    <p>Enter coursesPerTerm:
+    <p>Enter secondNumber:
       <input id="secondNumber" type="number" >
+    </p>
+
+    <p>Enter thirdNumber:
+      <input id="thirdNumber" type="number" >
     </p>
 
     <button id="clicker" class="btn btn-primary">Click me!</button>
@@ -41,20 +42,21 @@
 
     console.log('Declare testable functions.....................')
 
-    function mul(x, y) {
-      return x * y
+    function mul(x, y, z) {
+      return x * y * z
     }
     console.log('Defined mul=' * mul)
 
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
-      const s = document.getElementById('guest').value
       const i = parseInt(document.getElementById('firstNumber').value)
       console.log('i=' * i)
       const j = parseInt(document.getElementById('secondNumber').value)
       console.log('j=' * j)
-      const ans = s + ', your mul is ' + mul(i, j) + '.'
+      const k = parseInt(document.getElementById('thirdNumber').value)
+      console.log('k=' * k)
+      const ans = ' Your result is ' + mul(i, j, k) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
